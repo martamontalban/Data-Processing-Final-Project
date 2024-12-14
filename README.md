@@ -44,4 +44,9 @@ Here we describe the development of each step of the project. The main objective
 
 6. Fine-tunning
 
-   As a final attempt to improve the results, a transformer with a regression head has been implemented here.  
+   As a final attempt to improve the results, a transformer with a regression head has been implemented here. As a first step we need to traing the model. To do so, we split out dataset into
+   two train and test smaller datasets. Then we tokenized the training data, convert it to tensors, create a tensorDataset and use it to train the model using 3 epochs (Three complete
+   passes through the entire dataset. As a last step we prepare the test data the same way and we use it to test the predicting performance of the model. The results are shown below.
+
+   ![image](https://github.com/user-attachments/assets/012ac791-5dc6-44aa-a0c2-c7f6ad894dc1)
+
