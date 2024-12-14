@@ -14,22 +14,25 @@ Here we describe the development of each step of the project. The main objective
  It is important to mention that the input data used here corresponds to the column "Descriptions".
   
    --> TF - IDF
+
        To develop this method, BoW (Bag of words) has been previously done. BoW provides what we call corpus, which is the base of our TF-IDF model. The data used here
        has been previously treated using the preprocessed function mentioned above. We have used the Gensim libary thanks to which we are able to transform the corpus
        in to a weighted representation based on the frequency of words in a recipe and across the whole dataset.
      
    --> Word2vec
+
        For Word2vec vectorization we use Gensim library which generates word embeddings using the previous tokenized corpus. Each description is shown as the mean of the
        embeddings of it's words. Words that are not in the vocubulary of the model are not considered. Results are saved in a numpy array.
        
    --> Transformers
+
        This is a much more complex method which produces the embeddings according to the context of each word. RobertaModel is used for this purpose. Texts are tokenized
        ensuring a maximum input leght of 512 tokens. Then data is processed in batches of size 16 for more efficient computation. We obtain the mean embeddings from the
        last hidden layer, obtaining one vector representation per input, which is stored in a numpy array. The number of hidden layers and attention heads used is set by
        the roberta-based model. 
 
 
-4. Training and evaluation of regression model.
+5. Training and evaluation of regression model.
    
     Once the vectorization of the descriptions has been done we proceed to use the embeddings to train and evaluate predicction models. Random Forest and Neural Networks have been used,
     from the scikit learn tool. The results are represented in the table below. Here the two models have been used with they default parameters. Nevertheless, in order to achieve
