@@ -4,10 +4,23 @@
 Here we describe the development of each step of the project. The main objective is to apply Natural Language Processing (NLP) to process as set of recipies in the dataset "full_format_recipes". 
 
 1. Analysis of input variables
+First of all, our first step was to import the corresponding libraries and modules needed for our Python program. Those are the pandas library in order to work with structured data, NumPy library for numerical computations and working with arrays, the termcolor library used to coloriza text printed in the terminal, the reaborn library for creating statistical visualizations, Matplotlib library for creating visualizations in Pyhton, and more libraries that will be mention along the explication of our project and code.
 
+Secondly, we had import the database mention above and we had analyse the input data, which is a diccionary of 20130 cook recipes. Each recipe is define with different variables, in total 8 variables that describe each recipe. The input variables that describe each recipe are 'directions', 'fat', 'date', 'categories', 'calories', 'description', 'protein', 'rating', 'title', 'ingredients' and 'sodium'. The variables 'fat', 'date', 'calories', 'protein', 'rating' and 'sodium' contain numerical values and the rest of the variables contain text.
+
+Following, we eliminated null lines in dataset with the 'isna' function. In the code we visualize the relationship between the input variables, we start visualizing the variable 'categories' in order to see the relation of the categories of the different recipes. Some examples are counting the most common categorie with the 'value_counts()' and also the function 'explode()' is a key in the code because it is really useful to classify all the different words that compose a category. Other example is the creation of a category-rating relationship, where we plotted a figure evaluating the recipes that have categories in commom. Moreover, we analyze the correlation between numerical elements such as fat, calories... and rating, we computed a correlation matrix where a positive correlation closer to 1 between 2 variables means that the 2 vaariables have a proportional relation, if one increases, the other one increases as well. Correlation close to 0 means that there is no linear relation. And negative correlation means that the variables are inversely related. 
 
 2. Implementation of a pipeline for text processing
+In this section we first import the NLTK library, which is a powerful toolkit for working with text data in Python. We import the re module, used for pattern matching and text cleaning.
 
+We use preprocessing functions in order to improve the quality of textual data by: eliminating elements that do not add value, unifying the format of the text, reducing the complexity of the vocabulary, in order to prepare the text for models to process it more efficiently and accurately.
+
+2.1. Preprocess "Desc" column
+Here, we analyse the variables description. Firstly, we tokenize all the words that describe the variables desc in order to visualize and analyse them. We conclude that the dictionary contains 5764 terms, where terms refers to all the relative words contained in the description variable  of all the recipes in the dictionary. 
+
+2.2. Identify the number of descriptions in which each token appears
+
+2.3. Bag of words representation of the corpus
 
 3. Vector representation of the document usinf three different procedures
  In this section three vectorization methods have been used, TF-IDF, Word2Vec and Trasformers.
