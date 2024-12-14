@@ -3,13 +3,13 @@
 
 Here we describe the development of each step of the project. The main objective is to apply Natural Language Processing (NLP) to process as set of recipies in the dataset "full_format_recipes". 
 
-1. Analysis of input variables
+I. Analysis of input variables
 
 
-2. Implementation of a pipeline for text processing
+II.. Implementation of a pipeline for text processing
 
 
-3. Vector representation of the document usinf three different procedures
+III. Vector representation of the document usinf three different procedures
  In this section three vectorization methods have been used, TF-IDF, Word2Vec and Trasformers.
  It is important to mention that the input data used here corresponds to the column "Descriptions".
   
@@ -29,7 +29,7 @@ Here we describe the development of each step of the project. The main objective
        layers and attention heads used is set by the roberta-based model. 
 
 
-5. Training and evaluation of regression model.
+1V. Training and evaluation of regression model.
    
     Once the vectorization of the descriptions has been done we proceed to use the embeddings to train and evaluate predicction models. Random Forest and Neural Networks have been used,
     from the scikit learn tool. The results are represented in the table below. Here the two models have been used with they default parameters. Nevertheless, in order to achieve
@@ -41,7 +41,7 @@ Here we describe the development of each step of the project. The main objective
   vecotrization methods. Focussing on the well known mse, we can appreciate that the best result is obtained for Random forest with TF-IDF while the worst is the Neural Network with the same
   TF-IDF vector.
 
-6. Fine-tunning
+V. Fine-tunning
 
    As a final attempt to improve the results, a transformer with a regression head has been implemented here. As a first step we need to traing the model. To do so, we split out dataset into
    two train and test smaller datasets. Then we tokenized the training data, convert it to tensors, create a tensorDataset and use it to train the model using 3 epochs (Three complete
