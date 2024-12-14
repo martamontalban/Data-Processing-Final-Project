@@ -11,6 +11,7 @@ Here we describe the development of each step of the project. The main objective
 
 3. Vector representation of the document usinf three different procedures
 
+  
   In this section three vectorization methods have been used, TF-IDF, Word2Vec and Trasformers.
   It is important to mention that the input data used here corresponds to the column "Descriptions".
    
