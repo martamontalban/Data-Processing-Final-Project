@@ -48,5 +48,5 @@ Here we describe the development of each step of the project. The main objective
    two train and test smaller datasets. Then we tokenized the training data, convert it to tensors, create a tensorDataset and use it to train the model using 3 epochs (Three complete
    passes through the entire dataset. As a last step we prepare the test data the same way and we use it to test the predicting performance of the model. The results are shown below.
 
-   ![image](https://github.com/user-attachments/assets/012ac791-5dc6-44aa-a0c2-c7f6ad894dc1)
+![image](https://github.com/user-attachments/assets/11efd02e-a7f1-4e57-8bee-63e66d9aa8f5)
 
